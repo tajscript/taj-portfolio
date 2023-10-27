@@ -145,7 +145,11 @@ export type FreelanceNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = ProjectsSlice | AboutSlice | HeroSlice;
+type HomepageDocumentDataSlicesSlice =
+  | SkillsSlice
+  | ProjectsSlice
+  | AboutSlice
+  | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -665,6 +669,63 @@ export type ProjectsSlice = prismic.SharedSlice<
   ProjectsSliceVariation
 >;
 
+/**
+ * Primary content in *Skills → Primary*
+ */
+export interface SkillsSliceDefaultPrimary {
+  /**
+   * Heading field in *Skills → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Skills → Items*
+ */
+export interface SkillsSliceDefaultItem {
+  /**
+   * Label field in *Skills → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Skills Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SkillsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SkillsSliceDefaultPrimary>,
+  Simplify<SkillsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Skills*
+ */
+type SkillsSliceVariation = SkillsSliceDefault;
+
+/**
+ * Skills Shared Slice
+ *
+ * - **API ID**: `skills`
+ * - **Description**: Skills
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SkillsSlice = prismic.SharedSlice<"skills", SkillsSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -703,6 +764,11 @@ declare module "@prismicio/client" {
       ProjectsSliceDefaultItem,
       ProjectsSliceVariation,
       ProjectsSliceDefault,
+      SkillsSlice,
+      SkillsSliceDefaultPrimary,
+      SkillsSliceDefaultItem,
+      SkillsSliceVariation,
+      SkillsSliceDefault,
     };
   }
 }
