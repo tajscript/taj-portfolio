@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Lato, Montserrat, Cormorant } from 'next/font/google';
+import { Lato, Montserrat, Cormorant } from 'next/font/google'
 import '@/styles/globals.css'
+import { createClient } from '@/prismicio'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -20,6 +21,20 @@ const cormorant = Cormorant({
   display: 'swap',
   variable: '--font-cormorant',
 })
+
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+
+  const settings = await client.getSingle("settings");
+ 
+  return {
+    title: settings.data.site_title || "Taj Portfolio",
+    description: settings.data.meta_description || "A portfolio website for a web developer",
+    openGraph: {
+      images: [settings.data.og_image.url || ""],
+    },
+  };
+}
 
 export default function RootLayout({
   children,
