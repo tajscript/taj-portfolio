@@ -64,6 +64,15 @@
             "placeholder": ""
           }
         },
+        "skills": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Skills",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,list-item,o-list-item"
+          }
+        },
         "gitlink": {
           "type": "Link",
           "config": {

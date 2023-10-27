@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `Projects`.
@@ -15,7 +16,29 @@ const Projects = ({ slice }: ProjectsProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for projects (variation: {slice.variation}) Slices
+      <>{slice.primary.number}</>
+      <>{slice.primary.title}</>
+
+      <div>
+        {slice.items.map((item, index) => (
+          <div key={index}>
+            <>{item.heading}</>
+            <>{item.year}</>
+            <PrismicNextLink field={item.link}>
+            <>{item.label}</>
+            </PrismicNextLink>
+
+            <div>
+            <>{item.description}</>
+            <PrismicRichText field={item.skills} />
+            <PrismicNextLink field={item.gitlink}>
+            <>{item.gittext}</>
+            </PrismicNextLink>
+            <PrismicNextImage field={item.image} />
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

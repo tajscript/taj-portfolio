@@ -32,9 +32,15 @@
 				"thumbnails": {}
 			},
 			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "another",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laboris aliquip in dolor Lorem incididunt commodo quis tempor officia ullamco cillum sint. Amet sint mollit qui irure occaecat id pariatur officia cillum ut do sunt ex quis aliquip. Aute dolor quis dolor aute sint."
+						}
+					}
+				]
 			},
 			"title": {
 				"__TYPE__": "FieldContent",
