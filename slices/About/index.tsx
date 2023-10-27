@@ -1,4 +1,5 @@
 import { Content } from "@prismicio/client";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 
 /**
@@ -15,7 +16,21 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for about (variation: {slice.variation}) Slices
+      <>{slice.primary.number}</>
+      <>{slice.primary.title}</>
+
+      <div>
+        {slice.items.map((item, index) => (
+          <div key={index}>
+            <PrismicNextLink field={item.link}>
+            <>{item.label}</>
+            </PrismicNextLink>        
+          </div>
+        ))}
+      </div>
+
+      <PrismicNextImage field={slice.primary.image} />
+      <>{slice.primary.description}</>
     </section>
   );
 };

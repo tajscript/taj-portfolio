@@ -1,8 +1,8 @@
 {
-  "id": "about",
+  "id": "projects",
   "type": "SharedSlice",
-  "name": "About",
-  "description": "About",
+  "name": "Projects",
+  "description": "Projects",
   "variations": [
     {
       "id": "default",
@@ -25,30 +25,28 @@
             "label": "Title",
             "placeholder": ""
           }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "Description",
-            "placeholder": ""
-          }
         }
       },
       "items": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "year": {
+          "type": "Text",
+          "config": {
+            "label": "Year",
+            "placeholder": ""
+          }
+        },
         "link": {
           "type": "Link",
           "config": {
             "label": "Link",
             "placeholder": "",
-            "allowTargetBlank": false,
             "select": null
           }
         },
@@ -57,6 +55,36 @@
           "config": {
             "label": "Label",
             "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "gitlink": {
+          "type": "Link",
+          "config": {
+            "label": "GitLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "gittext": {
+          "type": "Text",
+          "config": {
+            "label": "GitText",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       }

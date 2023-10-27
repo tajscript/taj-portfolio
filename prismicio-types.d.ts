@@ -145,7 +145,7 @@ export type FreelanceNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice = ProjectsSlice | AboutSlice | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -347,6 +347,76 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *About → Primary*
+ */
+export interface AboutSliceDefaultPrimary {
+  /**
+   * Number field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.number
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  number: prismic.KeyTextField;
+
+  /**
+   * Title field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Image field in *About → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *About → Items*
+ */
+export interface AboutSliceDefaultItem {
+  /**
+   * Link field in *About → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *About → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
  * Default variation for About Slice
  *
  * - **API ID**: `default`
@@ -355,8 +425,8 @@ export type AllDocumentTypes =
  */
 export type AboutSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  never
+  Simplify<AboutSliceDefaultPrimary>,
+  Simplify<AboutSliceDefaultItem>
 >;
 
 /**
@@ -445,6 +515,146 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *Projects → Primary*
+ */
+export interface ProjectsSliceDefaultPrimary {
+  /**
+   * Number field in *Projects → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.primary.number
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  number: prismic.KeyTextField;
+
+  /**
+   * Title field in *Projects → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Projects → Items*
+ */
+export interface ProjectsSliceDefaultItem {
+  /**
+   * Heading field in *Projects → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Year field in *Projects → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].year
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  year: prismic.KeyTextField;
+
+  /**
+   * Link field in *Projects → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *Projects → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Description field in *Projects → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * GitLink field in *Projects → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].gitlink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  gitlink: prismic.LinkField;
+
+  /**
+   * GitText field in *Projects → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].gittext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  gittext: prismic.KeyTextField;
+
+  /**
+   * Image field in *Projects → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Projects Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProjectsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProjectsSliceDefaultPrimary>,
+  Simplify<ProjectsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Projects*
+ */
+type ProjectsSliceVariation = ProjectsSliceDefault;
+
+/**
+ * Projects Shared Slice
+ *
+ * - **API ID**: `projects`
+ * - **Description**: Projects
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProjectsSlice = prismic.SharedSlice<
+  "projects",
+  ProjectsSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -470,12 +680,19 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       AllDocumentTypes,
       AboutSlice,
+      AboutSliceDefaultPrimary,
+      AboutSliceDefaultItem,
       AboutSliceVariation,
       AboutSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ProjectsSlice,
+      ProjectsSliceDefaultPrimary,
+      ProjectsSliceDefaultItem,
+      ProjectsSliceVariation,
+      ProjectsSliceDefault,
     };
   }
 }

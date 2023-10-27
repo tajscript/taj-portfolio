@@ -1,0 +1,109 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"number": {
+				"__TYPE__": "FieldContent",
+				"value": "made",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "selection",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "stuck",
+							"type": "Text"
+						}
+					],
+					[
+						"year",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "clothing",
+							"type": "Text"
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
+							}
+						}
+					],
+					[
+						"label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "fine",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "faster",
+							"type": "Text"
+						}
+					],
+					[
+						"gitlink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"gittext",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "throat",
+							"type": "Text"
+						}
+					],
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+								"width": 3882,
+								"height": 2584
+							},
+							"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+							"width": 3882,
+							"height": 2584,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	}
+]
