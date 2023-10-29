@@ -4,7 +4,9 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FreelanceDocumentDataSlicesSlice = FreelanceHeroSlice;
+type FreelanceDocumentDataSlicesSlice =
+  | FreelanceAboutSlice
+  | FreelanceHeroSlice;
 
 /**
  * Content for Freelance documents
@@ -539,6 +541,91 @@ export type ContactSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *FreelanceAbout → Primary*
+ */
+export interface FreelanceAboutSliceDefaultPrimary {
+  /**
+   * Title field in *FreelanceAbout → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_about.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *FreelanceAbout → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_about.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Image field in *FreelanceAbout → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_about.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *FreelanceAbout → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_about.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *FreelanceAbout → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_about.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for FreelanceAbout Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceAboutSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FreelanceAboutSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FreelanceAbout*
+ */
+type FreelanceAboutSliceVariation = FreelanceAboutSliceDefault;
+
+/**
+ * FreelanceAbout Shared Slice
+ *
+ * - **API ID**: `freelance_about`
+ * - **Description**: FreelanceAbout
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceAboutSlice = prismic.SharedSlice<
+  "freelance_about",
+  FreelanceAboutSliceVariation
+>;
+
+/**
  * Primary content in *FreelanceHero → Primary*
  */
 export interface FreelanceHeroSliceDefaultPrimary {
@@ -581,16 +668,6 @@ export interface FreelanceHeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   scroll: prismic.KeyTextField;
-
-  /**
-   * Link field in *FreelanceHero → Primary*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_hero.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkToMediaField;
 }
 
 /**
@@ -934,6 +1011,10 @@ declare module "@prismicio/client" {
       ContactSliceDefaultPrimary,
       ContactSliceVariation,
       ContactSliceDefault,
+      FreelanceAboutSlice,
+      FreelanceAboutSliceDefaultPrimary,
+      FreelanceAboutSliceVariation,
+      FreelanceAboutSliceDefault,
       FreelanceHeroSlice,
       FreelanceHeroSliceDefaultPrimary,
       FreelanceHeroSliceVariation,

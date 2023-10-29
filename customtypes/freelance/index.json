@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "freelance_about": {
+              "type": "SharedSlice"
+            },
             "freelance_hero": {
               "type": "SharedSlice"
             }
