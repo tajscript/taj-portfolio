@@ -10,7 +10,11 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "freelance_hero": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

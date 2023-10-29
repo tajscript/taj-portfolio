@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FreelanceDocumentDataSlicesSlice = never;
+type FreelanceDocumentDataSlicesSlice = FreelanceHeroSlice;
 
 /**
  * Content for Freelance documents
@@ -107,17 +107,6 @@ interface FreelanceNavDocumentData {
   email_text: prismic.KeyTextField;
 
   /**
-   * Link field in *Freelance_Nav*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_nav.link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
    * Label field in *Freelance_Nav*
    *
    * - **Field Type**: Text
@@ -146,6 +135,7 @@ export type FreelanceNavDocument<Lang extends string = string> =
   >;
 
 type HomepageDocumentDataSlicesSlice =
+  | ContactSlice
   | SkillsSlice
   | ProjectsSlice
   | AboutSlice
@@ -215,66 +205,52 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 /**
- * Item in *Home_Nav → Navigation*
- */
-export interface NavDocumentDataNavigationItem {
-  /**
-   * Link field in *Home_Nav → Navigation*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nav.navigation[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Label field in *Home_Nav → Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nav.navigation[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
-}
-
-/**
  * Content for Home_Nav documents
  */
 interface NavDocumentData {
   /**
-   * Navigation field in *Home_Nav*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nav.navigation[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  navigation: prismic.GroupField<Simplify<NavDocumentDataNavigationItem>>;
-
-  /**
-   * Link field in *Home_Nav*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nav.link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Label field in *Home_Nav*
+   * About field in *Home_Nav*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: nav.label
+   * - **API ID Path**: nav.about
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  label: prismic.KeyTextField;
+  about: prismic.KeyTextField;
+
+  /**
+   * Projects field in *Home_Nav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nav.projects
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  projects: prismic.KeyTextField;
+
+  /**
+   * Contact field in *Home_Nav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nav.contact
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact: prismic.KeyTextField;
+
+  /**
+   * Freelance field in *Home_Nav*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nav.freelance
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  freelance: prismic.RichTextField;
 }
 
 /**
@@ -446,6 +422,206 @@ type AboutSliceVariation = AboutSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
+
+/**
+ * Primary content in *Contact → Primary*
+ */
+export interface ContactSliceDefaultPrimary {
+  /**
+   * Number field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.number
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  number: prismic.KeyTextField;
+
+  /**
+   * Title field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Link field in *Contact → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Connect field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.connect
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  connect: prismic.KeyTextField;
+
+  /**
+   * Email_Link field in *Contact → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.email_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  email_link: prismic.LinkField;
+
+  /**
+   * Email_Text field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.email_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Contact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Contact*
+ */
+type ContactSliceVariation = ContactSliceDefault;
+
+/**
+ * Contact Shared Slice
+ *
+ * - **API ID**: `contact`
+ * - **Description**: Contact
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactSlice = prismic.SharedSlice<
+  "contact",
+  ContactSliceVariation
+>;
+
+/**
+ * Primary content in *FreelanceHero → Primary*
+ */
+export interface FreelanceHeroSliceDefaultPrimary {
+  /**
+   * Description field in *FreelanceHero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_hero.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Label field in *FreelanceHero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_hero.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *FreelanceHero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_hero.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Scroll field in *FreelanceHero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_hero.primary.scroll
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  scroll: prismic.KeyTextField;
+
+  /**
+   * Link field in *FreelanceHero → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_hero.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkToMediaField;
+}
+
+/**
+ * Default variation for FreelanceHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceHeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FreelanceHeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FreelanceHero*
+ */
+type FreelanceHeroSliceVariation = FreelanceHeroSliceDefault;
+
+/**
+ * FreelanceHero Shared Slice
+ *
+ * - **API ID**: `freelance_hero`
+ * - **Description**: FreelanceHero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceHeroSlice = prismic.SharedSlice<
+  "freelance_hero",
+  FreelanceHeroSliceVariation
+>;
 
 /**
  * Primary content in *Hero → Primary*
@@ -746,7 +922,6 @@ declare module "@prismicio/client" {
       HomepageDocumentDataSlicesSlice,
       NavDocument,
       NavDocumentData,
-      NavDocumentDataNavigationItem,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
@@ -755,6 +930,14 @@ declare module "@prismicio/client" {
       AboutSliceDefaultItem,
       AboutSliceVariation,
       AboutSliceDefault,
+      ContactSlice,
+      ContactSliceDefaultPrimary,
+      ContactSliceVariation,
+      ContactSliceDefault,
+      FreelanceHeroSlice,
+      FreelanceHeroSliceDefaultPrimary,
+      FreelanceHeroSliceVariation,
+      FreelanceHeroSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

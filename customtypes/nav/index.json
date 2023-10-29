@@ -6,42 +6,34 @@
   "status": true,
   "json": {
     "Main": {
-      "navigation": {
-        "type": "Group",
-        "config": {
-          "label": "Navigation",
-          "fields": {
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
-              }
-            },
-            "label": {
-              "type": "Text",
-              "config": {
-                "label": "Label",
-                "placeholder": ""
-              }
-            }
-          }
-        }
-      },
-      "link": {
-        "type": "Link",
-        "config": {
-          "label": "Link",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "label": {
+      "about": {
         "type": "Text",
         "config": {
-          "label": "Label",
+          "label": "About",
           "placeholder": ""
+        }
+      },
+      "projects": {
+        "type": "Text",
+        "config": {
+          "label": "Projects",
+          "placeholder": ""
+        }
+      },
+      "contact": {
+        "type": "Text",
+        "config": {
+          "label": "Contact",
+          "placeholder": ""
+        }
+      },
+      "freelance": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Freelance",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4,strong,em"
         }
       }
     }

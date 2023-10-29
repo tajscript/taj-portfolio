@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"number": {
+				"__TYPE__": "FieldContent",
+				"value": "population",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "tie",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "according",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "needle",
+				"type": "Text"
+			},
+			"connect": {
+				"__TYPE__": "FieldContent",
+				"value": "very",
+				"type": "Text"
+			},
+			"email_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"email_text": {
+				"__TYPE__": "FieldContent",
+				"value": "ball",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
