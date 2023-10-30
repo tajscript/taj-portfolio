@@ -1,0 +1,74 @@
+{
+  "id": "freelance_contact",
+  "type": "SharedSlice",
+  "name": "FreelanceContact",
+  "description": "FreelanceContact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3,strong,em"
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "email_link": {
+          "type": "Link",
+          "config": {
+            "label": "Email_Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "consultation": {
+          "type": "Text",
+          "config": {
+            "label": "Consultation",
+            "placeholder": ""
+          }
+        },
+        "consultation_link": {
+          "type": "Link",
+          "config": {
+            "label": "Consultation_Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

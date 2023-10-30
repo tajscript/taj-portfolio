@@ -5,6 +5,8 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type FreelanceDocumentDataSlicesSlice =
+  | FreelanceContactSlice
+  | FreelanceWorkSlice
   | SkillsSlice
   | ProjectsSlice
   | FreelanceServicesSlice
@@ -630,6 +632,116 @@ export type FreelanceAboutSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *FreelanceContact → Primary*
+ */
+export interface FreelanceContactSliceDefaultPrimary {
+  /**
+   * Title field in *FreelanceContact → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Email field in *FreelanceContact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Email_Link field in *FreelanceContact → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.primary.email_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  email_link: prismic.LinkField;
+
+  /**
+   * Consultation field in *FreelanceContact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.primary.consultation
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  consultation: prismic.KeyTextField;
+
+  /**
+   * Consultation_Link field in *FreelanceContact → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.primary.consultation_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  consultation_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *FreelanceContact → Items*
+ */
+export interface FreelanceContactSliceDefaultItem {
+  /**
+   * Link field in *FreelanceContact → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *FreelanceContact → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_contact.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for FreelanceContact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceContactSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FreelanceContactSliceDefaultPrimary>,
+  Simplify<FreelanceContactSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *FreelanceContact*
+ */
+type FreelanceContactSliceVariation = FreelanceContactSliceDefault;
+
+/**
+ * FreelanceContact Shared Slice
+ *
+ * - **API ID**: `freelance_contact`
+ * - **Description**: FreelanceContact
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceContactSlice = prismic.SharedSlice<
+  "freelance_contact",
+  FreelanceContactSliceVariation
+>;
+
+/**
  * Primary content in *FreelanceHelp → Primary*
  */
 export interface FreelanceHelpSliceDefaultPrimary {
@@ -862,6 +974,96 @@ type FreelanceServicesSliceVariation = FreelanceServicesSliceDefault;
 export type FreelanceServicesSlice = prismic.SharedSlice<
   "freelance_services",
   FreelanceServicesSliceVariation
+>;
+
+/**
+ * Primary content in *FreelanceWork → Primary*
+ */
+export interface FreelanceWorkSliceDefaultPrimary {
+  /**
+   * Heading field in *FreelanceWork → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_work.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *FreelanceWork → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_work.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FreelanceWork → Items*
+ */
+export interface FreelanceWorkSliceDefaultItem {
+  /**
+   * Number field in *FreelanceWork → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_work.items[].number
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  number: prismic.KeyTextField;
+
+  /**
+   * Title field in *FreelanceWork → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_work.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *FreelanceWork → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: freelance_work.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for FreelanceWork Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceWorkSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FreelanceWorkSliceDefaultPrimary>,
+  Simplify<FreelanceWorkSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *FreelanceWork*
+ */
+type FreelanceWorkSliceVariation = FreelanceWorkSliceDefault;
+
+/**
+ * FreelanceWork Shared Slice
+ *
+ * - **API ID**: `freelance_work`
+ * - **Description**: FreelanceWork
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FreelanceWorkSlice = prismic.SharedSlice<
+  "freelance_work",
+  FreelanceWorkSliceVariation
 >;
 
 /**
@@ -1179,6 +1381,11 @@ declare module "@prismicio/client" {
       FreelanceAboutSliceDefaultPrimary,
       FreelanceAboutSliceVariation,
       FreelanceAboutSliceDefault,
+      FreelanceContactSlice,
+      FreelanceContactSliceDefaultPrimary,
+      FreelanceContactSliceDefaultItem,
+      FreelanceContactSliceVariation,
+      FreelanceContactSliceDefault,
       FreelanceHelpSlice,
       FreelanceHelpSliceDefaultPrimary,
       FreelanceHelpSliceDefaultItem,
@@ -1193,6 +1400,11 @@ declare module "@prismicio/client" {
       FreelanceServicesSliceDefaultItem,
       FreelanceServicesSliceVariation,
       FreelanceServicesSliceDefault,
+      FreelanceWorkSlice,
+      FreelanceWorkSliceDefaultPrimary,
+      FreelanceWorkSliceDefaultItem,
+      FreelanceWorkSliceVariation,
+      FreelanceWorkSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
