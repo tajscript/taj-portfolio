@@ -1,0 +1,35 @@
+.hero {
+    @apply w-full h-screen overflow-hidden
+}
+
+.wrapper {
+    @apply w-full h-[90%] flex flex-col justify-between py-10 px-5 sm:px-10 lg:px-20
+}
+
+.number {
+    @apply font-mont text-lg 
+}
+
+.container {
+    @apply flex flex-col w-full h-full items-center justify-center font-lato
+}
+
+.heading__container {
+    @apply w-full sm:w-[90%] xl:w-[70%]
+}
+
+.heading {
+    @apply text-[3.4rem] mx-auto text-center font-semibold leading-none sm:text-8xl lg:text-[10rem] lg:font-medium
+}
+
+.description {
+    @apply font-mont w-full mx-auto mt-2 text-sm text-center sm:text-base lg:text-left lg:flex lg:justify-end
+}
+
+.description > div {
+    @apply w-full lg:w-[45%]
+}
+
+.scroll {
+    @apply font-mont text-sm w-full md:text-base
+}

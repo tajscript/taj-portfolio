@@ -43,6 +43,15 @@
             "label": "Description",
             "placeholder": ""
           }
+        },
+        "scroll": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Scroll",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,em,embed,list-item,o-list-item,rtl,paragraph"
+          }
         }
       },
       "items": {}

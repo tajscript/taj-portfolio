@@ -1,0 +1,23 @@
+.header {
+    @apply relative w-full h-[10%] border-b-2 border-black
+}
+
+.nav {
+    @apply w-full font-mont font-medium h-full flex justify-between items-center px-5 sm:px-10 lg:px-20
+}
+
+.logo {
+    @apply w-[65px] h-auto sm:w-[80px] 
+}
+
+.button {
+    @apply text-sm uppercase sm:text-base 
+}
+
+.nav__menu {
+    @apply hidden lg:flex
+}
+
+.nav__menu ul {
+    @apply flex flex-row gap-4 uppercase
+}

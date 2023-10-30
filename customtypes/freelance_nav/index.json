@@ -13,21 +13,6 @@
           "placeholder": ""
         }
       },
-      "email_link": {
-        "type": "Link",
-        "config": {
-          "label": "Email_Link",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "email_text": {
-        "type": "Text",
-        "config": {
-          "label": "Email_Text",
-          "placeholder": ""
-        }
-      },
       "label": {
         "type": "Text",
         "config": {

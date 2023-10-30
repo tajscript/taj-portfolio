@@ -4,15 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/assets/logo.png"
 
+import Styles from "@/styles/header.module.css"
+
 export default async function Header() {
     const client = createClient();
 
   const nav = await client.getSingle("freelance_nav");
 
     return (
-        <header>
-            <nav>
-                <div>
+        <header className={Styles.header}>
+            <nav className={Styles.nav}>
+                
+                <div className={Styles.logo}>
                     <Link href="/">
                         <Image 
                         src={Logo}
@@ -23,15 +26,15 @@ export default async function Header() {
                     </Link>
                 </div>
 
+                <div className={Styles.title}>
                 <>{nav.data.text}</>
+                </div>
                 
-                <PrismicNextLink field={nav.data.email_link}>
-                <>{nav.data.email_text}</>
-                </PrismicNextLink>
-                
+                <div className={Styles.button}>
                 <Link href="/">
                 <>{nav.data.label}</>
                 </Link>
+                </div>
 
             </nav>
         </header>

@@ -93,28 +93,6 @@ interface FreelanceNavDocumentData {
   text: prismic.KeyTextField;
 
   /**
-   * Email_Link field in *Freelance_Nav*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_nav.email_link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  email_link: prismic.LinkField;
-
-  /**
-   * Email_Text field in *Freelance_Nav*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_nav.email_text
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  email_text: prismic.KeyTextField;
-
-  /**
    * Label field in *Freelance_Nav*
    *
    * - **Field Type**: Text
@@ -1109,6 +1087,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * Scroll field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.scroll
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  scroll: prismic.RichTextField;
 }
 
 /**

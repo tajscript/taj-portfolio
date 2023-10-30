@@ -2,6 +2,8 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Header from "@/components/FreelanceHeader";
 
+import Styles from "@/styles/freelanceHero.module.css";
+
 /**
  * Props for `FreelanceHero`.
  */
@@ -16,6 +18,7 @@ const FreelanceHero = ({ slice }: FreelanceHeroProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={Styles.hero}
     >
       <Header />
       <PrismicRichText field={slice.primary.description} />
