@@ -16,8 +16,16 @@ const FreelanceServices = ({ slice }: FreelanceServicesProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for freelance_services (variation: {slice.variation}
-      ) Slices
+      <>{slice.primary.heading}</>
+
+      <div>
+        {slice.items.map((item, index) => (
+          <div key={index}>
+            <>{item.title}</>
+            <>{item.description}</>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
