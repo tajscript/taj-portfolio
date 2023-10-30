@@ -1,0 +1,61 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Bottle"
+						}
+					}
+				]
+			},
+			"note": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore culpa voluptate amet ut exercitation veniam. Adipisicing pariatur irure sint sint laboris dolore labore ipsum aute fugiat amet ut. Ad cillum cupidatat enim nulla elit excepteur anim magna sunt amet pariatur veniam id."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "tribe",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "like",
+							"type": "Text"
+						}
+					],
+					[
+						"duration",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "band",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

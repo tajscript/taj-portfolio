@@ -11,6 +11,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "skills": {
+              "type": "SharedSlice"
+            },
+            "projects": {
+              "type": "SharedSlice"
+            },
+            "freelance_services": {
+              "type": "SharedSlice"
+            },
+            "freelance_help": {
+              "type": "SharedSlice"
+            },
             "freelance_about": {
               "type": "SharedSlice"
             },
