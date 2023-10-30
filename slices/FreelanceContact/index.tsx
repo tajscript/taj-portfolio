@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `FreelanceContact`.
@@ -16,8 +17,25 @@ const FreelanceContact = ({ slice }: FreelanceContactProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for freelance_contact (variation: {slice.variation})
-      Slices
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicNextLink field={slice.primary.email_link}>
+      <>{slice.primary.email}</>
+      </PrismicNextLink>
+
+      <div>
+        {slice.items.map((item, index) => (
+          <div key={index}>
+            <PrismicNextLink field={item.link}>
+            <>{item.label}</>
+            </PrismicNextLink>
+          </div>
+        ))}
+      </div>
+
+      <PrismicNextLink field={slice.primary.consultation_link}>
+      <>{slice.primary.consultation}</>
+      </PrismicNextLink>
+
     </section>
   );
 };
