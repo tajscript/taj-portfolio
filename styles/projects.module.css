@@ -15,7 +15,7 @@
 }
 
 .items {
-    @apply border border-x-2 first-of-type:border-t-2 last-of-type:border-b-2 border-black flex flex-col lg:flex-row
+    @apply border border-black flex flex-col lg:flex-row
 }
 
 .item__wrapper {
@@ -35,7 +35,7 @@
 }
 
 .git__link {
-    @apply mt-2 font-lato text-sm border border-black p-1 h-[25px] w-[70px]
+    @apply mt-2 font-lato underline underline-offset-2
 }
 
 .link {

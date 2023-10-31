@@ -1,9 +1,9 @@
 .header {
-    @apply relative w-full h-[10%] border-b-2 border-black
+    @apply relative w-full h-[10%] px-5 sm:px-10 lg:px-20
 }
 
 .nav {
-    @apply w-full font-mont font-medium h-full flex justify-between items-center px-5 sm:px-10 lg:px-20
+    @apply w-full font-mont font-medium h-full flex justify-between items-center border-b border-black
 }
 
 .logo {

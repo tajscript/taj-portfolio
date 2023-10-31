@@ -61,9 +61,8 @@ const Projects = ({ slice }: ProjectsProps): JSX.Element => {
             </div>
 
             <div className={Styles.git__link}>
-            <PrismicNextLink field={item.gitlink} className={Styles.link}>
+            <PrismicNextLink field={item.gitlink}>
             <>{item.gittext}</>
-            <BsArrowUpRight />
             </PrismicNextLink>
             </div>
             </div>
