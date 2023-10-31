@@ -1,0 +1,67 @@
+.project {
+    @apply w-full h-full overflow-hidden px-5 py-10 sm:px-10 lg:px-20
+}
+
+.wrapper {
+    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-20
+}
+
+.number {
+    @apply font-cormorant text-lg sm:text-xl
+}
+
+.container {
+    @apply w-full h-full flex flex-col
+}
+
+.items {
+    @apply border border-x-2 first-of-type:border-t-2 last-of-type:border-b-2 border-black flex flex-col lg:flex-row
+}
+
+.item__wrapper {
+    @apply w-full border-b border-black lg:w-[30%] lg:border-r lg:border-b-0
+}
+
+.item {
+    @apply p-2 w-full h-full flex flex-row items-center justify-between sm:p-3 lg:flex-col lg:p-5 lg:items-start
+}
+
+.heading {
+    @apply font-lato text-sm sm:text-base
+}
+
+.link__wrapper {
+    @apply font-lato text-sm border border-black p-1 h-[25px] w-[80px]
+}
+
+.git__link {
+    @apply mt-2 font-lato text-sm border border-black p-1 h-[25px] w-[70px]
+}
+
+.link {
+    @apply flex flex-row gap-[2px] h-full w-full items-center text-sm
+}
+
+.description {
+    @apply w-full flex flex-col gap-6 p-2 sm:p-3 xl:flex-row xl:w-[70%] lg:p-5
+}
+
+.details {
+    @apply w-full flex flex-col justify-between xl:w-[50%]
+}
+
+.details__text {
+    @apply font-mont text-sm sm:text-base
+}
+
+.skills {
+    @apply font-medium mt-2
+}
+
+.image__wrapper {
+    @apply w-full xl:w-[50%]
+}
+
+.image {
+    @apply w-full h-full
+}

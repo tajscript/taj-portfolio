@@ -25,10 +25,8 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       <>{slice.primary.number}</>
       </div>
 
-      <div className={Styles.title}>
       <>{slice.primary.title}</>
-      </div>
-
+  
       <div className={Styles.socials}>
         {slice.items.map((item, index) => (
           <div key={index} className={Styles.social}>
@@ -41,19 +39,17 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       </div>
 
       <div className={Styles.container}>
-      <div className={Styles.description}>
         <div className={Styles.image__wrapper}>
           <div className={Styles.image}>
-          <PrismicNextImage field={slice.primary.image} />
+          <PrismicNextImage field={slice.primary.image} className="rounded-sm"/>
           </div>
         </div>
 
       <PrismicRichText field={slice.primary.description} />
-      <div className="pt-2"/>
+      <div className="pt-2 lg:pt-4"/>
       <>{slice.primary.description0}</>
       <div className="pt-2 lg:pt-4"/>
       <>{slice.primary.description1}</>
-      </div>
       </div>
       
     </section>

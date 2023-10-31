@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base
+    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-20
 }
 
 .number {
@@ -11,21 +11,17 @@
 }
 
 .socials {
-    @apply hidden md:flex flex-col lg:flex-row lg:gap-2
+    @apply hidden md:flex flex-col xl:flex-row lg:gap-2
 }
 
 .container {
-    @apply w-full bg-neon font-mont rounded-2xl p-2
-}
-
-.description {
-    @apply border-2 border-black rounded-2xl px-1 py-5 h-full sm:text-lg sm:px-10 lg:px-20 lg:text-xl lg:py-20
+    @apply w-full font-mont px-2 py-5 border-2 border-black text-sm sm:text-lg sm:p-10
 }
 
 .image__wrapper {
-    @apply w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] float-left mr-3 mb-2
+    @apply w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] float-left mr-3
 }
 
 .image {
-    @apply w-full h-full 
+    @apply w-full h-full
 }

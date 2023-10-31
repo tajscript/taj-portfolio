@@ -31,7 +31,7 @@ export default async function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/">
+                        <Link href="/#project">
                         <>{nav.data.projects}</>
                         </Link>
                     </li>
