@@ -7,7 +7,7 @@
 }
 
 .number {
-    @apply font-mont text-lg 
+    @apply font-cormorant font-semibold text-lg sm:text-xl
 }
 
 .container {

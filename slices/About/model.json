@@ -26,14 +26,6 @@
             "placeholder": ""
           }
         },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "description": {
           "type": "StructuredText",
           "config": {
@@ -41,6 +33,28 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph"
+          }
+        },
+        "description0": {
+          "type": "Text",
+          "config": {
+            "label": "Description0",
+            "placeholder": ""
+          }
+        },
+        "description1": {
+          "type": "Text",
+          "config": {
+            "label": "Description1",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

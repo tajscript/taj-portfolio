@@ -1,6 +1,5 @@
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { AiOutlineArrowDown } from "react-icons/ai";
 
 import Header from "@/components/Header";
 import Styles from "@/styles/hero.module.css";

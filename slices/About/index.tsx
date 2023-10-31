@@ -18,13 +18,14 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={Styles.about}
+      id="about"
     >
       <div className={Styles.wrapper}>
       <div className={Styles.number}>
       <>{slice.primary.number}</>
       </div>
 
-      <div className={Styles.number}>
+      <div className={Styles.title}>
       <>{slice.primary.title}</>
       </div>
 
@@ -40,13 +41,18 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       </div>
 
       <div className={Styles.container}>
-      <div className={Styles.image__wrapper}>
-      <div className={Styles.image}>
-      <PrismicNextImage field={slice.primary.image} />
-      </div>
-      </div>
       <div className={Styles.description}>
+        <div className={Styles.image__wrapper}>
+          <div className={Styles.image}>
+          <PrismicNextImage field={slice.primary.image} />
+          </div>
+        </div>
+
       <PrismicRichText field={slice.primary.description} />
+      <div className="pt-2"/>
+      <>{slice.primary.description0}</>
+      <div className="pt-2 lg:pt-4"/>
+      <>{slice.primary.description1}</>
       </div>
       </div>
       

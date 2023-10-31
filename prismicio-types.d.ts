@@ -337,16 +337,6 @@ export interface AboutSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Image field in *About → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
    * Description field in *About → Primary*
    *
    * - **Field Type**: Rich Text
@@ -355,6 +345,36 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description: prismic.RichTextField;
+
+  /**
+   * Description0 field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.description0
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description0: prismic.KeyTextField;
+
+  /**
+   * Description1 field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.description1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description1: prismic.KeyTextField;
+
+  /**
+   * Image field in *About → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**

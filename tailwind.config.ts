@@ -9,10 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'neon': '#81EF2C'
+      },
       fontFamily: {
         lato: ['var(--font-lato)'],
         mont: ['var(--font-mont)'],
-        cormorant: ['var(--font-cormorant)']
+        cormorant: ['var(--font-cormorant)'],
       },
     },
   },

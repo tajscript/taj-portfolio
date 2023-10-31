@@ -26,7 +26,7 @@ export default async function Header() {
                 <div className={Styles.nav__menu}>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href="/#about">
                         <>{nav.data.about}</>
                         </Link>
                     </li>
