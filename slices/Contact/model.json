@@ -33,25 +33,10 @@
             "placeholder": ""
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "label": {
+        "text": {
           "type": "Text",
           "config": {
-            "label": "Label",
-            "placeholder": ""
-          }
-        },
-        "connect": {
-          "type": "Text",
-          "config": {
-            "label": "Connect",
+            "label": "Text",
             "placeholder": ""
           }
         },
@@ -69,9 +54,32 @@
             "label": "Email_Text",
             "placeholder": ""
           }
+        },
+        "connect": {
+          "type": "Text",
+          "config": {
+            "label": "Connect",
+            "placeholder": ""
+          }
         }
       },
-      "items": {}
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        }
+      }
     }
   ]
 }

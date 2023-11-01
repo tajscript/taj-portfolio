@@ -11,5 +11,5 @@ html {
 }
 
 body {
-    @apply overflow-x-hidden
+    @apply overflow-x-hidden bg-anti_flash text-onyx
 }

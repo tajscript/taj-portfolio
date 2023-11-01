@@ -39,16 +39,10 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       </div>
 
       <div className={Styles.container}>
-        <div className={Styles.image__wrapper}>
-          <div className={Styles.image}>
-          <PrismicNextImage field={slice.primary.image} className="rounded-sm"/>
-          </div>
-        </div>
-
       <PrismicRichText field={slice.primary.description} />
-      <div className="pt-2 lg:pt-4"/>
+      <div className="pt-2"/>
       <>{slice.primary.description0}</>
-      <div className="pt-2 lg:pt-4"/>
+      <div className="pt-2"/>
       <>{slice.primary.description1}</>
       </div>
       

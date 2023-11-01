@@ -13,23 +13,6 @@
 				"value": "tie",
 				"type": "Text"
 			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "according",
-				"type": "Text"
-			},
-			"link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
-			"label": {
-				"__TYPE__": "FieldContent",
-				"value": "needle",
-				"type": "Text"
-			},
 			"connect": {
 				"__TYPE__": "FieldContent",
 				"value": "very",
@@ -46,8 +29,42 @@
 				"__TYPE__": "FieldContent",
 				"value": "ball",
 				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "height",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "FieldContent",
+				"value": "hung",
+				"type": "Text"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "until",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
 	}
 ]

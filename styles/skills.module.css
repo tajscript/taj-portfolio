@@ -3,7 +3,7 @@
 }
 
 .heading {
-    @apply text-center font-cormorant font-bold text-lg sm:text-xl
+    @apply text-center font-cormorant font-semibold text-lg sm:text-xl
 }
 
 .wrapper {
@@ -11,5 +11,5 @@
 }
 
 .items {
-    @apply border border-black text-center font-mont text-sm py-1 xl:py-2
+    @apply border border-onyx text-center font-mont text-sm py-1 xl:py-2
 }

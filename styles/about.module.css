@@ -15,13 +15,5 @@
 }
 
 .container {
-    @apply w-full font-mont px-2 py-5 border border-black text-sm sm:text-lg sm:p-10
-}
-
-.image__wrapper {
-    @apply w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] float-left mr-3
-}
-
-.image {
-    @apply w-full h-full
+    @apply w-full font-mont px-2 py-5 border border-onyx text-sm sm:text-lg sm:p-10
 }

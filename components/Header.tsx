@@ -36,7 +36,7 @@ export default async function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/">
+                        <Link href="/#contact">
                         <>{nav.data.contact}</>
                         </Link>
                     </li>

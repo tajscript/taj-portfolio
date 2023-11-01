@@ -10,7 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'neon': '#81EF2C'
+        'anti_flash': '#E8E9EB',
+        'flash': '#FEFFFE',
+        'onyx': '#313638',
+        'pear': '#CFD11A',
       },
       fontFamily: {
         lato: ['var(--font-lato)'],

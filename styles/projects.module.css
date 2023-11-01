@@ -15,11 +15,11 @@
 }
 
 .items {
-    @apply border border-black flex flex-col lg:flex-row
+    @apply border border-onyx flex flex-col lg:flex-row hover:bg-flash
 }
 
 .item__wrapper {
-    @apply w-full border-b border-black lg:w-[30%] lg:border-r lg:border-b-0
+    @apply w-full border-b border-onyx lg:w-[30%] lg:border-r lg:border-b-0
 }
 
 .item {
@@ -31,7 +31,7 @@
 }
 
 .link__wrapper {
-    @apply font-lato text-sm border border-black p-1 h-[25px] w-[80px]
+    @apply font-lato text-sm border border-onyx p-1 h-[25px] w-[80px]
 }
 
 .git__link {

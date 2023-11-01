@@ -1,0 +1,59 @@
+.contact {
+    @apply w-full h-full overflow-hidden py-10 px-5 md:py-20 sm:px-10 lg:px-20
+}
+
+.wrapper {
+    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-20
+}
+
+.number {
+    @apply font-cormorant text-lg sm:text-xl
+}
+
+.container {
+    @apply block w-full h-full mt-20
+}
+
+.info {
+    @apply w-full h-full flex flex-col lg:flex-row
+}
+
+.heading {
+    @apply font-mont mb-2 font-semibold text-sm w-full sm:text-lg lg:w-[60%]
+}
+
+.contact__me {
+    @apply w-full h-full lg:w-[40%]
+}
+
+.contact__text {
+    @apply text-left font-mont mb-2 text-sm sm:text-base
+}
+
+.email {
+    @apply border border-onyx rounded-full text-sm font-mont h-[40px] w-[150px] 
+}
+
+.email__link {
+    @apply w-full h-full flex items-center justify-center
+}
+
+.socials {
+    @apply mt-10 flex flex-col items-center justify-center w-full h-full  sm:mt-20
+}
+
+.socials__text {
+    @apply font-cormorant uppercase font-bold text-lg sm:text-xl
+}
+
+.socials__wrapper {
+    @apply mt-6 grid gap-4 grid-cols-2 place-items-center sm:grid-cols-4 sm:mt-10
+}
+
+.items {
+    @apply w-[100px] h-[100px] border border-onyx rounded-full
+}
+
+.item {
+    @apply w-full h-full flex items-center justify-center text-sm font-mont
+}

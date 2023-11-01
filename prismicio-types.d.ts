@@ -365,16 +365,6 @@ export interface AboutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description1: prismic.KeyTextField;
-
-  /**
-   * Image field in *About → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
 }
 
 /**
@@ -464,34 +454,14 @@ export interface ContactSliceDefaultPrimary {
   heading: prismic.KeyTextField;
 
   /**
-   * Link field in *Contact → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Label field in *Contact → Primary*
+   * Text field in *Contact → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.primary.label
+   * - **API ID Path**: contact.primary.text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  label: prismic.KeyTextField;
-
-  /**
-   * Connect field in *Contact → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.primary.connect
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  connect: prismic.KeyTextField;
+  text: prismic.KeyTextField;
 
   /**
    * Email_Link field in *Contact → Primary*
@@ -512,6 +482,41 @@ export interface ContactSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   email_text: prismic.KeyTextField;
+
+  /**
+   * Connect field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.connect
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  connect: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Contact → Items*
+ */
+export interface ContactSliceDefaultItem {
+  /**
+   * Link field in *Contact → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *Contact → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
 }
 
 /**
@@ -524,7 +529,7 @@ export interface ContactSliceDefaultPrimary {
 export type ContactSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<ContactSliceDefaultPrimary>,
-  never
+  Simplify<ContactSliceDefaultItem>
 >;
 
 /**
@@ -1383,6 +1388,7 @@ declare module "@prismicio/client" {
       AboutSliceDefault,
       ContactSlice,
       ContactSliceDefaultPrimary,
+      ContactSliceDefaultItem,
       ContactSliceVariation,
       ContactSliceDefault,
       FreelanceAboutSlice,
