@@ -30,10 +30,6 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
 
       <div className={Styles.container}>
       <div className={Styles.info}>
-      <div className={Styles.heading}>
-      <>{slice.primary.heading}</>
-      </div>
-
       <div className={Styles.contact__me}>
           <div className={Styles.contact__text}>
           <>{slice.primary.text}</>
@@ -50,6 +46,10 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       <div className={Styles.socials}>
         <div className={Styles.socials__text}>
         <>{slice.primary.connect}</>
+        </div>
+
+        <div className={Styles.email__text}>
+        <>{slice.primary.email}</>
         </div>
 
         <div className={Styles.socials__wrapper}>

@@ -4,122 +4,6 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FreelanceDocumentDataSlicesSlice =
-  | FreelanceContactSlice
-  | FreelanceWorkSlice
-  | SkillsSlice
-  | ProjectsSlice
-  | FreelanceServicesSlice
-  | FreelanceHelpSlice
-  | FreelanceAboutSlice
-  | FreelanceHeroSlice;
-
-/**
- * Content for Freelance documents
- */
-interface FreelanceDocumentData {
-  /**
-   * Slice Zone field in *Freelance*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<FreelanceDocumentDataSlicesSlice> /**
-   * Meta Description field in *Freelance*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: freelance.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Freelance*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Freelance*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: freelance.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Freelance document from Prismic
- *
- * - **API ID**: `freelance`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type FreelanceDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<FreelanceDocumentData>,
-    "freelance",
-    Lang
-  >;
-
-/**
- * Content for Freelance_Nav documents
- */
-interface FreelanceNavDocumentData {
-  /**
-   * Text field in *Freelance_Nav*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_nav.text
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  text: prismic.KeyTextField;
-
-  /**
-   * Label field in *Freelance_Nav*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: freelance_nav.label
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
-}
-
-/**
- * Freelance_Nav document from Prismic
- *
- * - **API ID**: `freelance_nav`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type FreelanceNavDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<FreelanceNavDocumentData>,
-    "freelance_nav",
-    Lang
-  >;
-
 type HomepageDocumentDataSlicesSlice =
   | ContactSlice
   | SkillsSlice
@@ -306,8 +190,6 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes =
-  | FreelanceDocument
-  | FreelanceNavDocument
   | HomepageDocument
   | NavDocument
   | SettingsDocument;
@@ -444,16 +326,6 @@ export interface ContactSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Heading field in *Contact → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
    * Text field in *Contact → Primary*
    *
    * - **Field Type**: Text
@@ -462,6 +334,16 @@ export interface ContactSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   text: prismic.KeyTextField;
+
+  /**
+   * Email field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
 
   /**
    * Email_Link field in *Contact → Primary*
@@ -1368,11 +1250,6 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      FreelanceDocument,
-      FreelanceDocumentData,
-      FreelanceDocumentDataSlicesSlice,
-      FreelanceNavDocument,
-      FreelanceNavDocumentData,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,

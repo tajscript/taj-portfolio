@@ -30,14 +30,14 @@
 				"value": "ball",
 				"type": "Text"
 			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "height",
-				"type": "Text"
-			},
 			"text": {
 				"__TYPE__": "FieldContent",
 				"value": "hung",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "paid",
 				"type": "Text"
 			}
 		},
