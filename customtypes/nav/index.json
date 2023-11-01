@@ -21,19 +21,12 @@
         }
       },
       "contact": {
-        "type": "Text",
-        "config": {
-          "label": "Contact",
-          "placeholder": ""
-        }
-      },
-      "freelance": {
         "type": "StructuredText",
         "config": {
-          "label": "Freelance",
+          "label": "Contact",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "heading4,strong,em"
+          "single": "paragraph,strong,list-item,o-list-item,embed,rtl,em"
         }
       }
     }

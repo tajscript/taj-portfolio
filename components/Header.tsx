@@ -35,17 +35,12 @@ export default async function Header() {
                         <>{nav.data.projects}</>
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/#contact">
-                        <>{nav.data.contact}</>
-                        </Link>
-                    </li>
                 </ul>
                 </div>
 
                 <div className={Styles.button}>
-                    <Link href="/freelance">
-                    <PrismicRichText field={nav.data.freelance} />
+                    <Link href="/#contact">
+                    <PrismicRichText field={nav.data.contact} />
                     </Link>
                 </div>
 
