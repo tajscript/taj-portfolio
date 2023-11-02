@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-20
+    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-32
 }
 
 .number {
@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply block w-full h-full mt-20
+    @apply block w-full h-full my-20
 }
 
 .contact__me {
@@ -23,7 +23,7 @@
 }
 
 .email {
-    @apply border border-onyx rounded-full text-sm font-mont h-[40px] w-[150px] 
+    @apply bg-onyx text-flash rounded-full text-sm font-mont h-[40px] w-[150px] 
 }
 
 .email__link {
@@ -31,7 +31,7 @@
 }
 
 .email__text {
-    @apply font-mont
+    @apply font-mont text-sm lg:text-lg
 }
 
 .socials {

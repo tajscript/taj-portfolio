@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/assets/logo.png"
+import Logo from "@/public/assets/logo.svg";
 import { PrismicRichText } from "@prismicio/react";
 
 import Styles from "@/styles/header.module.css"

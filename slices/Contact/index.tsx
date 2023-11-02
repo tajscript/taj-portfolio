@@ -49,7 +49,9 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
         </div>
 
         <div className={Styles.email__text}>
-        <>{slice.primary.email}</>
+          <PrismicNextLink field={slice.primary.email_link}>
+            <>{slice.primary.email}</>
+          </PrismicNextLink>        
         </div>
 
         <div className={Styles.socials__wrapper}>

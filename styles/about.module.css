@@ -15,5 +15,5 @@
 }
 
 .container {
-    @apply w-full font-mont px-2 py-5 border border-onyx text-sm sm:text-lg sm:p-10
+    @apply w-full font-mont px-2 py-5 border-y-4 border-onyx text-sm sm:text-lg sm:p-10
 }
