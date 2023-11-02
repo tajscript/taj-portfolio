@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
-import { Lato, Montserrat, Cormorant } from 'next/font/google'
-import '@/styles/globals.css'
-import { createClient } from '@/prismicio'
+import type { Metadata } from 'next';
+import { Lato, Montserrat, Cormorant } from 'next/font/google';
+import '@/styles/globals.css';
+import { createClient } from '@/prismicio';
 
 const lato = Lato({
   subsets: ['latin'],

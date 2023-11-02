@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-20
+    @apply w-full flex justify-between font-mont font-semibold mb-20 text-sm sm:text-base lg:mb-20
 }
 
 .number {
@@ -15,7 +15,7 @@
 }
 
 .items {
-    @apply border border-onyx flex flex-col lg:flex-row hover:bg-flash
+    @apply border border-onyx flex flex-col transition-all duration-200 ease-in lg:flex-row hover:bg-flash
 }
 
 .item__wrapper {

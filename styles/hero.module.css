@@ -19,7 +19,7 @@
 }
 
 .heading {
-    @apply text-[3.4rem] mx-auto text-center font-semibold leading-none sm:text-8xl xl:text-[10rem] lg:font-medium
+    @apply text-[3.4rem] mx-auto text-center font-semibold leading-none sm:text-8xl lg:text-9xl xl:text-[10rem] lg:font-medium
 }
 
 .description {
@@ -32,4 +32,16 @@
 
 .scroll {
     @apply font-mont text-sm w-full md:text-base
+}
+
+.label__container {
+    @apply relative
+}
+
+.label__wrapper {
+    @apply bg-pear absolute top-0 right-0 font-semibold p-1 w-[90px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:right-3 lg:top-3
+}
+
+.label {
+    @apply w-full h-full border border-onyx flex items-center justify-center
 }

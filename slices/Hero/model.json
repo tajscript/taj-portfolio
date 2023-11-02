@@ -52,6 +52,13 @@
             "allowTargetBlank": true,
             "single": "strong,em,embed,list-item,o-list-item,rtl,paragraph"
           }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
