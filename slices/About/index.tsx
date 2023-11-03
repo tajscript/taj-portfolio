@@ -21,6 +21,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       className={Styles.about}
       id="about"
     >
+      <div className={Styles.about__container}>
       <div className={Styles.wrapper}>
       <div className={Styles.number}>
       <>{slice.primary.number}</>
@@ -45,6 +46,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       <>{slice.primary.description0}</>
       <div className="pt-2"/>
       <>{slice.primary.description1}</>
+      </div>
       </div>
       
       <Slider />

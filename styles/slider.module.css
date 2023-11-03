@@ -1,0 +1,15 @@
+.container {
+    @apply mt-5 w-full h-full overflow-hidden lg:mt-0
+}
+
+.wrapper {
+    @apply w-full relative h-full py-16 flex flex-col items-center justify-center overflow-hidden sm:py-20 md:py-28
+}
+
+.frontend {
+    @apply flex flex-row gap-3 rotate-12 bg-pear py-1 font-lato text-sm font-semibold sm:gap-6 sm:rotate-6 md:text-lg md:gap-10 xl:text-xl xl:py-2 
+}
+
+.developer {
+    @apply flex flex-row gap-3 -rotate-12 bg-pear py-1 font-lato text-sm font-semibold sm:gap-6 sm:-rotate-6 md:text-lg md:gap-10 xl:text-xl xl:py-2
+}
