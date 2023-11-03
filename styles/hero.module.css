@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply flex flex-col w-full h-full items-center justify-center font-lato
+    @apply flex flex-col w-full h-full items-center justify-center font-lato relative
 }
 
 .heading__container {
@@ -19,7 +19,11 @@
 }
 
 .heading {
-    @apply text-[3.4rem] mx-auto text-center font-semibold leading-none sm:text-8xl lg:text-9xl xl:text-[10rem] lg:font-medium
+    @apply text-[3.3rem] mx-auto text-center font-semibold leading-none sm:text-8xl lg:text-9xl xl:text-[10rem] lg:font-medium
+}
+
+.heading__child {
+    @apply flex flex-auto w-full justify-center flex-shrink
 }
 
 .description {
@@ -39,7 +43,7 @@
 }
 
 .label__wrapper {
-    @apply bg-pear absolute top-0 right-0 font-semibold p-1 w-[90px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:right-3 lg:top-3
+    @apply bg-pear absolute top-0 right-0 font-semibold p-1 w-[90px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:top-3 lg:right-3
 }
 
 .label {

@@ -445,6 +445,16 @@ export interface HeroSliceDefaultPrimary {
   heading: prismic.RichTextField;
 
   /**
+   * Child field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.child
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  child: prismic.RichTextField;
+
+  /**
    * Heading0 field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text
@@ -453,6 +463,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading0: prismic.RichTextField;
+
+  /**
+   * Child0 field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.child0
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  child0: prismic.RichTextField;
 
   /**
    * Description field in *Hero → Primary*

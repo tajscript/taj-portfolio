@@ -28,6 +28,15 @@
             "single": "heading2,strong"
           }
         },
+        "child": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Child",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong,em"
+          }
+        },
         "heading0": {
           "type": "StructuredText",
           "config": {
@@ -35,6 +44,15 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "heading2,strong"
+          }
+        },
+        "child0": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Child0",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong,em"
           }
         },
         "description": {

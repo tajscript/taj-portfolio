@@ -3,6 +3,7 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 import Styles from "@/styles/about.module.css";
+import Slider from "@/components/Slider";
 
 /**
  * Props for `About`.
@@ -46,6 +47,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       <>{slice.primary.description1}</>
       </div>
       
+      <Slider />
     </section>
   );
 };

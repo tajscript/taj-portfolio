@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply block w-full h-full my-20
+    @apply block w-full h-full
 }
 
 .contact__me {
@@ -31,7 +31,7 @@
 }
 
 .email__text {
-    @apply font-mont text-sm lg:text-lg
+    @apply font-mont text-sm lg:text-base
 }
 
 .socials {

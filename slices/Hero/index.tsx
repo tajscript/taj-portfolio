@@ -29,16 +29,23 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <div className={Styles.container}>
       <div className={Styles.heading__container}>
         <div className={Styles.heading}>
-          <div className={Styles.label__container}>
-          <PrismicRichText field={slice.primary.heading} />
 
+          <div className={Styles.label__container}>
+            <div className={Styles.heading__child}>
+            <PrismicRichText field={slice.primary.heading} />
+            <PrismicRichText field={slice.primary.child} />
+            </div>
           <div className={Styles.label__wrapper}>
               <div className={Styles.label}>
                 <>{slice.primary.label}</>
               </div>
             </div>
           </div>
-          <PrismicRichText field={slice.primary.heading0} />
+
+          <div className={Styles.heading__child}>
+            <PrismicRichText field={slice.primary.heading0} /> 
+            <PrismicRichText field={slice.primary.child0} /> 
+          </div>       
         </div>
 
         <div className={Styles.description}>
@@ -51,7 +58,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         </div>
 
         <div className={Styles.scroll}>
-        <PrismicRichText field={slice.primary.scroll} />
+            <PrismicRichText field={slice.primary.scroll} />
         </div>
 
     
