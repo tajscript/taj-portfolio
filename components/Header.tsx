@@ -1,3 +1,5 @@
+"use client"
+
 import { createClient } from "@/prismicio";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,12 +10,11 @@ import Styles from "@/styles/header.module.css"
 
 export default async function Header() {
     const client = createClient();
-
-  const nav = await client.getSingle("nav");
+    const nav = await client.getSingle("nav");
 
     return (
         <header className={Styles.header}>
-            <nav className={Styles.nav}>
+            <nav className={Styles.nav} >
                 <div className={Styles.logo}>
                     <Link href="/">
                         <Image 

@@ -3,7 +3,7 @@ import { PrismicNextLink } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 import Link from "next/link";
 
-import Styles from "@/styles/contact.module.css"
+import Styles from "@/styles/contact.module.css";
 
 /**
  * Props for `Contact`.
@@ -65,9 +65,7 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       </div>
 
       </div>
-
       </div>
-      
     </section>
   );
 };

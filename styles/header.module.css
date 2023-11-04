@@ -21,3 +21,8 @@
 .nav__menu ul {
     @apply flex flex-row gap-4 uppercase
 }
+
+/* Hover Effect */
+.nav__menu ul li {
+    @apply relative after:transition-all after:duration-300 after:ease-linear after:absolute after:text-left after:bottom-0 after:left-0 after:mx-auto after:w-0 after:text-transparent after:bg-onyx after:h-[1px] after:hover:w-full
+}

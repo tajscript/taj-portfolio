@@ -21,3 +21,8 @@
 .container {
     @apply w-full font-mont px-2 py-5 border-y-4 border-onyx text-sm sm:text-lg sm:p-10
 }
+
+/* Hover Effect */
+.social {
+    @apply relative after:transition-all after:duration-300 after:ease-linear after:absolute after:text-left after:bottom-0 after:left-0 after:mx-auto after:w-0 after:text-transparent after:bg-onyx after:h-[2px] after:hover:w-full
+}

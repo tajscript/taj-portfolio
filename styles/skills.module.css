@@ -11,5 +11,5 @@
 }
 
 .items {
-    @apply border border-onyx text-center font-mont text-sm py-1 xl:py-2
+    @apply hover:bg-flash transition-all duration-300 ease-in border border-onyx text-center font-mont text-sm py-1 xl:py-2
 }
