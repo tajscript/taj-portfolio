@@ -1,7 +1,13 @@
+'use client'
+
 import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { BsArrowUpRight } from 'react-icons/bs';
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 import Styles from "@/styles/projects.module.css";
 
@@ -14,12 +20,48 @@ export type ProjectsProps = SliceComponentProps<Content.ProjectsSlice>;
  * Component for "Projects" Slices.
  */
 const Projects = ({ slice }: ProjectsProps): JSX.Element => {
+  const projectRef = useRef<HTMLDivElement | null>(null);
+
+  useLayoutEffect(() => {
+
+    let project = gsap.context(() => {
+
+      gsap.utils.toArray<HTMLElement>('#project').forEach((item) => {
+
+        gsap.fromTo(
+          item,
+          {
+            y: 100,
+          },
+          {
+            scrollTrigger: {
+              trigger: item,
+              start: '-80px bottom',
+              scrub: 1
+            },
+            duration: 1,
+            ease: 'expo.out',
+            y: 0,
+          }
+        );
+
+      });
+
+    })
+
+    return () => {
+        project.revert();
+    }
+
+    }, [])
+
+  
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={Styles.project}
-      id="project"
+      ref={projectRef}
     >
       <div className={Styles.wrapper}>
       <div className={Styles.number}>
@@ -31,7 +73,7 @@ const Projects = ({ slice }: ProjectsProps): JSX.Element => {
 
       <div className={Styles.container}>
         {slice.items.map((item, index) => (
-          <div key={index} className={Styles.items}>
+          <div key={index} className={Styles.items} id="project">
 
             <div className={Styles.item__wrapper}>
             <div className={Styles.item}>
