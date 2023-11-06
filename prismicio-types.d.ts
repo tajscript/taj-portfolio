@@ -445,16 +445,6 @@ export interface HeroSliceDefaultPrimary {
   heading: prismic.RichTextField;
 
   /**
-   * Child field in *Hero → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.child
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  child: prismic.RichTextField;
-
-  /**
    * Heading0 field in *Hero → Primary*
    *
    * - **Field Type**: Rich Text

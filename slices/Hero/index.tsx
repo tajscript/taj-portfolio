@@ -20,12 +20,40 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   const labelRef = useRef<HTMLDivElement | null>(null);
+  const leftRef = useRef<HTMLDivElement | null>(null);
+  const rightRef = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
 
     let hero = gsap.context(() => {
 
-      gsap.fromTo(labelRef.current, { opacity: 0 }, { opacity: 1, repeat: -1, duration: 2.5, yoyo: true, ease: "expo.inOut", })
+      gsap.fromTo(labelRef.current, { opacity: 0 }, { opacity: 1, repeat: -1, duration: 2, yoyo: true, ease: "expo.inOut", })
+
+      gsap.to(leftRef.current, {
+        opacity: 0,
+        x: -500,
+        ease: "none",
+        duration: 2,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: "#description",
+          start: "top center",
+          scrub: 2
+      }
+      })
+
+      gsap.to(rightRef.current, {
+        opacity: 0,
+        x: 500,
+        ease: "none",
+        duration: 2,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: "#description",
+          start: "top center",
+          scrub: 2
+      }
+      })
 
     })
 
@@ -53,14 +81,8 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className={Styles.heading}>
 
           <div className={Styles.label__container}>
-            <div className={Styles.heading__child}>
-              <div className={Styles.left}>
+            <div className={Styles.heading__child} >
               <PrismicRichText field={slice.primary.heading} />
-              </div>
-              <div className={Styles.right}>
-              <PrismicRichText field={slice.primary.child} />
-              </div>
-            
             </div>
           <div className={Styles.label__wrapper} ref={labelRef}>
               <div className={Styles.label}>
@@ -70,17 +92,17 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
 
           <div className={Styles.heading__child}>
-          <div className={Styles.left}>
+          <div className={Styles.left} ref={leftRef}>
           <PrismicRichText field={slice.primary.heading0} />
           </div>
-          <div className={Styles.right}>
+          <div className={Styles.right} ref={rightRef}>
           <PrismicRichText field={slice.primary.child0} /> 
           </div> 
             
           </div>       
         </div>
 
-        <div className={Styles.description}>
+        <div className={Styles.description} id="description">
         <div>
         <>{slice.primary.description}</>
         </div>
@@ -89,7 +111,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         </div>
         </div>
 
-        <div className={Styles.scroll}>
+        <div className={Styles.scroll} id="scroll">
             <PrismicRichText field={slice.primary.scroll} />
         </div>
 

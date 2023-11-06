@@ -50,17 +50,6 @@
 				"value": "who",
 				"type": "Text"
 			},
-			"child": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Brain"
-						}
-					}
-				]
-			},
 			"child0": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
