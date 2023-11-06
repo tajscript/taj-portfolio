@@ -19,17 +19,18 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
-  const heroRef = useRef<HTMLDivElement | null>(null)
+  const labelRef = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
 
-    let header = gsap.context(() => {
-        gsap.set(heroRef.current, {opacity: 0})
-        gsap.to(heroRef.current, {opacity: 1, duration: 1.5, ease: "sine"})
+    let hero = gsap.context(() => {
+
+      gsap.fromTo(labelRef.current, { opacity: 0 }, { opacity: 1, repeat: -1, duration: 2.5, yoyo: true, ease: "expo.inOut", })
+
     })
 
     return () => {
-        header.revert();
+        hero.revert();
     }
 
     }, [])
@@ -39,7 +40,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={Styles.hero}
-      ref={heroRef}
     >
       <Header />
 
@@ -54,10 +54,15 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
           <div className={Styles.label__container}>
             <div className={Styles.heading__child}>
-            <PrismicRichText field={slice.primary.heading} />
-            <PrismicRichText field={slice.primary.child} />
+              <div className={Styles.left}>
+              <PrismicRichText field={slice.primary.heading} />
+              </div>
+              <div className={Styles.right}>
+              <PrismicRichText field={slice.primary.child} />
+              </div>
+            
             </div>
-          <div className={Styles.label__wrapper}>
+          <div className={Styles.label__wrapper} ref={labelRef}>
               <div className={Styles.label}>
                 <>{slice.primary.label}</>
               </div>
@@ -65,8 +70,13 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
 
           <div className={Styles.heading__child}>
-            <PrismicRichText field={slice.primary.heading0} /> 
-            <PrismicRichText field={slice.primary.child0} /> 
+          <div className={Styles.left}>
+          <PrismicRichText field={slice.primary.heading0} />
+          </div>
+          <div className={Styles.right}>
+          <PrismicRichText field={slice.primary.child0} /> 
+          </div> 
+            
           </div>       
         </div>
 
