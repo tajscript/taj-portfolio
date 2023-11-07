@@ -27,7 +27,7 @@
 }
 
 .description {
-    @apply font-mont w-full mx-auto mt-2 text-sm text-center sm:text-base xl:text-left xl:flex xl:justify-end
+    @apply font-mont w-full mx-auto mt-2 text-center sm:text-lg xl:text-left xl:flex xl:justify-end
 }
 
 .description > div {

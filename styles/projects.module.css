@@ -51,7 +51,7 @@
 }
 
 .details__text {
-    @apply font-mont text-sm sm:text-base
+    @apply font-mont
 }
 
 .skills {
