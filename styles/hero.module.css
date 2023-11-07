@@ -1,5 +1,5 @@
 .hero {
-    @apply w-full h-[90vh] overflow-hidden sm:h-screen
+    @apply w-full h-screen overflow-hidden
 }
 
 .wrapper {
@@ -35,7 +35,7 @@
 }
 
 .scroll {
-    @apply font-mont text-sm w-full md:text-base
+    @apply font-mont text-sm w-full mb-5 sm:mb-0 md:text-base
 }
 
 .label__container {
@@ -43,7 +43,7 @@
 }
 
 .label__wrapper {
-    @apply bg-pear absolute top-0 right-1 sm:right-0 font-semibold p-1 w-[105px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:top-3 lg:right-3
+    @apply bg-pear absolute top-0 right-1 sm:right-0 font-semibold p-1 w-[95px] h-[35px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:top-3 lg:right-3
 }
 
 .label {
