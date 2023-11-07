@@ -43,7 +43,7 @@
 }
 
 .label__wrapper {
-    @apply bg-pear absolute top-0 right-1 sm:right-0 font-semibold p-1 w-[95px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:top-3 lg:right-3
+    @apply bg-pear absolute top-0 right-1 sm:right-0 font-semibold p-1 w-[105px] h-[30px] text-[10px] font-lato rotate-45 sm:text-sm sm:w-[120px] sm:h-[50px] lg:top-3 lg:right-3
 }
 
 .label {

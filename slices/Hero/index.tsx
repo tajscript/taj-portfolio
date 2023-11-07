@@ -25,19 +25,20 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   useLayoutEffect(() => {
 
-    let hero = gsap.context(() => {
+    let mm = gsap.matchMedia();
 
-      gsap.fromTo(labelRef.current, { opacity: 0 }, { opacity: 1, repeat: -1, duration: 2, yoyo: true, ease: "expo.inOut", })
-
+    mm.add("(min-width: 800px)", () => {
       gsap.to(leftRef.current, {
         opacity: 0,
         x: -500,
+        lazy: false,
         ease: "none",
         duration: 2,
         delay: 0.5,
         scrollTrigger: {
           trigger: "#description",
           start: "top center",
+          end: "bottom top",
           scrub: 2
       }
       })
@@ -45,22 +46,28 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       gsap.to(rightRef.current, {
         opacity: 0,
         x: 500,
+        lazy: false,
         ease: "none",
         duration: 2,
         delay: 0.5,
         scrollTrigger: {
           trigger: "#description",
           start: "top center",
+          end: "bottom top",
           scrub: 2
       }
       })
 
     })
 
+    let hero = gsap.context(() => {
+      gsap.fromTo(labelRef.current, { opacity: 0 }, { opacity: 1, repeat: -1, duration: 2, yoyo: true, lazy: false, ease: "expo.inOut", })
+    })
+
     return () => {
         hero.revert();
     }
-
+    
     }, [])
 
   return (
