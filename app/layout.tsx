@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Lato, Montserrat, Cormorant } from 'next/font/google';
 import '@/styles/globals.css';
-import { createClient } from '@/prismicio';
+import { createClient, repositoryName } from '@/prismicio';
+import { PrismicPreview } from '@prismicio/next';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.variable} ${mont.variable} ${cormorant.variable}`}>
         {children}
+        <PrismicPreview repositoryName={repositoryName} />
         </body>
     </html>
   )
