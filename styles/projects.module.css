@@ -1,9 +1,9 @@
 .project {
-    @apply w-full h-full overflow-hidden px-5 py-10 sm:px-10 lg:px-20
+    @apply w-full h-full overflow-hidden px-5 pb-10 sm:px-10 lg:px-20 lg:py-10
 }
 
 .wrapper {
-    @apply w-full flex justify-between font-mont font-semibold mb-20 text-sm sm:text-base lg:mb-20
+    @apply w-full flex justify-between font-mont font-semibold mb-10 text-sm sm:text-base lg:mb-16
 }
 
 .number {
@@ -43,7 +43,7 @@
 }
 
 .description {
-    @apply w-full flex flex-col gap-6 p-2 sm:p-3 xl:flex-row xl:w-[70%] lg:p-5
+    @apply w-full flex flex-col gap-6 p-2 sm:p-3 sm:pt-10 xl:flex-row xl:w-[70%] lg:p-5
 }
 
 .details {
