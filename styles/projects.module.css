@@ -31,11 +31,11 @@
 }
 
 .link__wrapper {
-    @apply font-lato text-sm border border-onyx p-1 h-[25px] w-[80px]
+    @apply font-lato flex justify-center items-center text-sm border border-onyx p-1 h-[30px] w-[85px]
 }
 
 .git__link {
-    @apply mt-2 font-lato underline underline-offset-2
+    @apply mt-2 font-lato font-medium underline underline-offset-2
 }
 
 .link {

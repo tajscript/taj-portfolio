@@ -3,7 +3,7 @@
 }
 
 .nav {
-    @apply w-full font-mont font-medium h-full flex justify-between items-center border-b-4 border-onyx
+    @apply w-full font-mont font-medium h-full flex justify-between items-center border-b-2 border-onyx lg:border-b-4
 }
 
 .logo {
